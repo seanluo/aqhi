@@ -24,5 +24,6 @@ class Pm25in(object):
             return None
         final_api = self.base_url + "aqi_details.json"
         r = requests.get(final_api, {'token': self.token, 'city': city_name})
+        r.raise_for_status()
         return r.json()
 

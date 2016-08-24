@@ -65,7 +65,7 @@ def calc_and_cache_for_list(sites_data):
 def main():
     city_name = "上海"
     p = Pm25in()
-    details = p.get_detail_by_city(city_name)
+    details = p.get_all_by_city(city_name)
     site_list = rename_null_to_city_name(city_name, details)
     calc_and_cache_for_list(site_list)
 
